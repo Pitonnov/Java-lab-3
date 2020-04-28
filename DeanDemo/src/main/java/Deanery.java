@@ -102,7 +102,7 @@ public class Deanery {
         return averageStudentMark;
     }
 
-    public Student tranferToAhotherGroup(Student student, Group newGgroup) {
+    public Student transferToAnotherGroup(Student student, Group newGgroup) {
         student.getGroup().expellStudentFromGroup(student);
         student.enrolltoGroup(newGgroup);
         return student;

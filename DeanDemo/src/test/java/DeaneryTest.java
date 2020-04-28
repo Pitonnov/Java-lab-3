@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -55,33 +54,33 @@ class DeaneryTest {
     }
 
     @Test
-    public void tranferToAhotherGroup() {
+    public void transferToAnotherGroup() {
         Student newStudent = deanery.createStudent("Ерроров Стек Оверфлоевич");
         Student newStudent1 = deanery.createStudent("Ерророва Стека Оверфлоевна");
         newStudent.enrolltoGroup(groups.get(0));
         newStudent1.enrolltoGroup(groups.get(1));
-        deanery.tranferToAhotherGroup(newStudent, groups.get(1));
+        deanery.transferToAnotherGroup(newStudent, groups.get(1));
         assertEquals(newStudent.getGroup(), newStudent1.getGroup());
     }
 
     @Test
-    public void tranferToAhotherGroup1() {
+    public void transferToAnotherGroup1() {
         Student newStudent = deanery.createStudent("Ерроров Стек Оверфлоевич");
         Student newStudent1 = deanery.createStudent("Ерророва Стека Оверфлоевна");
         newStudent.enrolltoGroup(groups.get(2));
         newStudent1.enrolltoGroup(groups.get(1));
-        deanery.tranferToAhotherGroup(newStudent1, groups.get(2));
+        deanery.transferToAnotherGroup(newStudent1, groups.get(2));
         assertEquals(newStudent1.getGroup(), newStudent.getGroup());
     }
 
     @Test
-    public void tranferToAhotherGroup2() {
+    public void transferToAnotherGroup2() {
         Student newStudent = deanery.createStudent("Ерроров Стек Оверфлоевич");
         Student newStudent1 = deanery.createStudent("Ерророва Стека Оверфлоевна");
         newStudent.enrolltoGroup(groups.get(2));
         newStudent1.enrolltoGroup(groups.get(2));
-        deanery.tranferToAhotherGroup(newStudent, groups.get(0));
-        deanery.tranferToAhotherGroup(newStudent1, groups.get(0));
+        deanery.transferToAnotherGroup(newStudent, groups.get(0));
+        deanery.transferToAnotherGroup(newStudent1, groups.get(0));
         assertEquals(newStudent.getGroup(), newStudent1.getGroup());
     }
 

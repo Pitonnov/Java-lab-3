@@ -26,7 +26,7 @@ public class Main {
             int randomStudent = (int) (Math.random() * 90);
             dekanat.getAverageMarkInTheGroup(groups.get(i));
             dekanat.holdElection(groups.get(i));
-            dekanat.tranferToAhotherGroup(students.get(randomStudent), groups.get(randomGroup));
+            dekanat.transferToAnotherGroup(students.get(randomStudent), groups.get(randomGroup));
         }
         dekanat.getTheWorsetStudentsInGroup();
         dekanat.expellTheWorsetStudents(dekanat.getTheWorsetStudentsInGroup());
