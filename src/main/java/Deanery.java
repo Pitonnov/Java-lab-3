@@ -25,10 +25,10 @@ public class Deanery {
 
             Iterator groupsIterator = deanary.keys();
             while (groupsIterator.hasNext()) {
-                String group_name = (String) groupsIterator.next();
-                Group newGroup = new Group(group_name);
+                String groupName = (String) groupsIterator.next();
+                Group newGroup = new Group(groupName);
                 groups.add(newGroup);
-                JSONArray studentsArray = (JSONArray) deanary.get(group_name);
+                JSONArray studentsArray = (JSONArray) deanary.get(groupName);
                 for (int i = 0; i < studentsArray.length(); i++) {
                     JSONObject studentJSON = (JSONObject) studentsArray.get(i);
                     String studentName = (String) studentJSON.get("name");
