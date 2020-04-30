@@ -28,7 +28,6 @@ public class Main {
             dekanat.holdElection(groups.get(i));
             dekanat.transferToAnotherGroup(students.get(randomStudent), groups.get(randomGroup));
         }
-        dekanat.getTheWorsetStudentsInGroup();
         dekanat.expellTheWorsetStudents(dekanat.getTheWorsetStudentsInGroup());
         //This method forms new list of students who passed their session successfully
         dekanat.createNewJSONfile("NewGroups.json");

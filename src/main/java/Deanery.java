@@ -118,21 +118,22 @@ public class Deanery {
             averageMarkInTheGroup = getAverageMarkInTheGroup(groups.get(i));
             for (int j = 0; j < groupStudents.size(); j++) {
                 averageStudentMark = getAverageStudentMark(groupStudents.get(j));
-                if ( averageStudentMark < averageMarkInTheGroup || averageStudentMark <=  2 ) {
+                if (averageStudentMark < averageMarkInTheGroup || averageStudentMark == 2) {
+                    theWorstStudens.add(groupStudents.get(i));
                 }
             }
-            theWorstStudens.add(groupStudents.get(i));
         }
+        System.out.println(theWorstStudens);
         return theWorstStudens;
     }
 
     public ArrayList expellTheWorsetStudents(ArrayList theWorstStudens) {
        for  (int i = 0; i < students.size(); i++) {
            for (int j = 0; j < theWorstStudens.size(); j++) {
-               if (students.contains(theWorstStudens.get(j))) {
-                   students.get(i).getGroup().expellStudentFromGroup(students.get(i));
+               if (students.get(i) == theWorstStudens.get(j)) {
+                   //students.get(i).getGroup().expellStudentFromGroup(students.get(i));
                    students.remove(students.get(i));
-                   System.out.println("The student " + students.get(i).getFio() + " is expelled because of academic failure");
+                   System.out.println("The student " + students.get(i).getFio() + students.get(i).getGroup() + " is expelled because of academic failure");
                }
            }
        }
