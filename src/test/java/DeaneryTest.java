@@ -91,8 +91,8 @@ class DeaneryTest {
         newStudent.enrolltoGroup(groups.get(2));
         newStudent1.enrolltoGroup(groups.get(2));
         deanery.addMarks();
-        ArrayList<Student> awfullStudents = deanery.getTheWorsetStudentsInGroup();
-        assertEquals(awfullStudents, deanery.getTheWorsetStudentsInGroup());
+        ArrayList<Student> awfullStudents = deanery.getTheWorstStudentsInGroup();
+        assertEquals(awfullStudents, deanery.getTheWorstStudentsInGroup());
     }
 
     @Test
@@ -102,18 +102,18 @@ class DeaneryTest {
         newStudent.enrolltoGroup(groups.get(2));
         newStudent1.enrolltoGroup(groups.get(2));
         deanery.addMarks();
-        ArrayList<Student> awfullStudents1 = deanery.getTheWorsetStudentsInGroup();
-        assertEquals(awfullStudents1, deanery.getTheWorsetStudentsInGroup());
+        ArrayList<Student> awfullStudents1 = deanery.getTheWorstStudentsInGroup();
+        assertEquals(awfullStudents1, deanery.getTheWorstStudentsInGroup());
     }
 
     @Test
-    public void expellTheWorsetStudents() {
+    public void expellTheWorstStudents() {
         Student newStudent = deanery.createStudent("Ерроров Стек Оверфлоевич");
         Student newStudent1 = deanery.createStudent("Ерророва Стека Оверфлоевна");
         newStudent.enrolltoGroup(groups.get(2));
         newStudent1.enrolltoGroup(groups.get(2));
         deanery.addMarks();
-        ArrayList<Student> awfullStudents = deanery.getTheWorsetStudentsInGroup();
+        ArrayList<Student> awfullStudents = deanery.getTheWorstStudentsInGroup();
         ArrayList<Student> successfullStudents = deanery.expellTheWorsetStudents(awfullStudents);
         assertEquals(successfullStudents, deanery.expellTheWorsetStudents(awfullStudents));
     }
@@ -125,7 +125,7 @@ class DeaneryTest {
         newStudent.enrolltoGroup(groups.get(0));
         newStudent1.enrolltoGroup(groups.get(1));
         deanery.addMarks();
-        ArrayList<Student> awfullStudents = deanery.getTheWorsetStudentsInGroup();
+        ArrayList<Student> awfullStudents = deanery.getTheWorstStudentsInGroup();
         ArrayList<Student> successfullStudents1 = deanery.expellTheWorsetStudents(awfullStudents);
         assertEquals(successfullStudents1, deanery.expellTheWorsetStudents(awfullStudents));
     }

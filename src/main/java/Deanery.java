@@ -83,9 +83,9 @@ public class Deanery {
         for (int i = 0; i < groups.size(); i++) {
             if (groups.get(i) == group ) {
                 averageMarkInTheGroup = groups.get(i).calculateAverageGroupMark();
+                break;
             }
         }
-        group.toString();
         System.out.println("The average mark in group in " + group + " is " + averageMarkInTheGroup);
         return averageMarkInTheGroup;
     }
@@ -97,7 +97,6 @@ public class Deanery {
             } else {
                 System.out.println("There isn`t such student in groups!");
             }
-            student.toString();
         System.out.println("The average mark of student " + student.getFio() + " is " + averageStudentMark);
         return averageStudentMark;
     }
@@ -109,29 +108,29 @@ public class Deanery {
     }
 
 
-    public ArrayList<Student> getTheWorsetStudentsInGroup() {
+    public ArrayList<Student> getTheWorstStudentsInGroup() {
         int averageMarkInTheGroup = 0;
         int averageStudentMark = 0;
-        ArrayList<Student> theWorstStudens = new ArrayList();
+        ArrayList<Student> theWorstStudents = new ArrayList();
         for (int i = 0; i < groups.size(); i++) {
             ArrayList<Student> groupStudents = groups.get(i).getStudentsArray();
             averageMarkInTheGroup = getAverageMarkInTheGroup(groups.get(i));
             for (int j = 0; j < groupStudents.size(); j++) {
                 averageStudentMark = getAverageStudentMark(groupStudents.get(j));
                 if (averageStudentMark < averageMarkInTheGroup || averageStudentMark == 2) {
-                    theWorstStudens.add(groupStudents.get(i));
+                    theWorstStudents.add(groupStudents.get(j));
                 }
             }
         }
-        System.out.println(theWorstStudens);
-        return theWorstStudens;
+        System.out.println(theWorstStudents);
+        return theWorstStudents;
     }
 
-    public ArrayList expellTheWorsetStudents(ArrayList theWorstStudens) {
+    public ArrayList expellTheWorsetStudents(ArrayList theWorstStudents) {
        for  (int i = 0; i < students.size(); i++) {
-           for (int j = 0; j < theWorstStudens.size(); j++) {
-               if (students.get(i) == theWorstStudens.get(j)) {
-                   //students.get(i).getGroup().expellStudentFromGroup(students.get(i));
+           for (int j = 0; j < theWorstStudents.size(); j++) {
+               if (students.get(i) == theWorstStudents.get(j)) {
+                   students.get(i).getGroup().expellStudentFromGroup(students.get(i));
                    students.remove(students.get(i));
                    System.out.println("The student " + students.get(i).getFio() + students.get(i).getGroup() + " is expelled because of academic failure");
                }
