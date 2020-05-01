@@ -14,7 +14,7 @@ public class Group {
     }
 
     public ArrayList addStudent(Student student) {
-        studentsArray.add(student);
+        student.enrolltoGroup(this);
         return studentsArray;
     }
 

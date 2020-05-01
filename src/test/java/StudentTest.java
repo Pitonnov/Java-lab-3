@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
-    static int ID = 91;
-    static String FIO = "Джавин Иван Андреевич";
+    static final int ID = 91;
+    static final String FIO = "Джавин Иван Андреевич";
     Student testStudent = new Student (ID, FIO);
 
     @Test

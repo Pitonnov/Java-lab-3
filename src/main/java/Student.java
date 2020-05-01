@@ -59,4 +59,8 @@ public class Student {
         js.put("name", fio);
         return js;
     }
+
+    public String toString(){
+        return "Student(id=" + id + "; fio='" +fio +"')";
+    }
 }

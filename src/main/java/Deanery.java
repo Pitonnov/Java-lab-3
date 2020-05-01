@@ -43,6 +43,10 @@ public class Deanery {
         }
     }
 
+    public Deanery() {
+    }
+
+
     protected static Integer getNextId() {
         Integer lastId1 = lastId;
         lastId++;
@@ -64,6 +68,12 @@ public class Deanery {
         System.out.println("The student " + newStudent.getFio() + " is assignet id №" + newStudent.getId());
         return newStudent;
     }
+
+    public ArrayList<Group> addGroup (Group newGroup) {
+        groups.add(newGroup);
+        return groups;
+    }
+
 
     public void addMarks() {
         int newMark = 1;
@@ -117,7 +127,7 @@ public class Deanery {
             averageMarkInTheGroup = getAverageMarkInTheGroup(groups.get(i));
             for (int j = 0; j < groupStudents.size(); j++) {
                 averageStudentMark = getAverageStudentMark(groupStudents.get(j));
-                if (averageStudentMark < averageMarkInTheGroup || averageStudentMark == 2) {
+                if (averageStudentMark < averageMarkInTheGroup || averageStudentMark <= 2) {
                     theWorstStudents.add(groupStudents.get(j));
                 }
             }
@@ -126,16 +136,14 @@ public class Deanery {
         return theWorstStudents;
     }
 
-    public ArrayList expellTheWorsetStudents(ArrayList theWorstStudents) {
-       for  (int i = 0; i < students.size(); i++) {
-           for (int j = 0; j < theWorstStudents.size(); j++) {
-               if (students.get(i) == theWorstStudents.get(j)) {
-                   students.get(i).getGroup().expellStudentFromGroup(students.get(i));
-                   students.remove(students.get(i));
-                   System.out.println("The student " + students.get(i).getFio() + students.get(i).getGroup() + " is expelled because of academic failure");
-               }
-           }
-       }
+    public ArrayList<Student> expellTheWorsetStudents(ArrayList<Student> theWorstStudents) {
+        for (Student wstudent : theWorstStudents) {
+            if (students.contains(wstudent)) {
+                wstudent.getGroup().expellStudentFromGroup(wstudent);
+                System.out.println("The student " + wstudent.getFio() + wstudent.getGroup() + " is expelled because of academic failure");
+                students.remove(wstudent);
+            }
+        }
         return students;
     }
 
