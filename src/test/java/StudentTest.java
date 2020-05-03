@@ -1,0 +1,82 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class StudentTest {
+
+    Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+
+    @org.junit.Test
+    void addMarks1() {
+        ArrayList<MARKS> testMarkList = new ArrayList(Arrays.asList(MARKS.PERFECTLY,MARKS.BADLY));
+        testStudent1.addMarks("1234", MARKS.PERFECTLY, MARKS.BADLY);
+        assertEquals(testMarkList,testStudent1.getMarks());
+        testMarkList.add(MARKS.WELL);
+        testStudent1.addMarks("1234","WELL");
+        assertEquals(testMarkList,testStudent1.getMarks());
+    }
+
+    @org.junit.Test
+    void AddMarks2() {
+        ArrayList<MARKS> testMarkList = new ArrayList<>(Arrays.asList(MARKS.PERFECTLY,MARKS.BADLY));
+        testStudent1.addMarks("1234", 5, 1);
+        assertEquals(testMarkList,testStudent1.getMarks());
+        testMarkList.add(MARKS.WELL);
+        testStudent1.addMarks("1234",MARKS.WELL);
+        assertEquals(testMarkList,testStudent1.getMarks());
+    }
+
+    @org.junit.Test
+    void AddMarks3() {
+        ArrayList<MARKS> testMarkList = new ArrayList<>(Arrays.asList(MARKS.PERFECTLY,MARKS.BADLY));
+        testStudent1.addMarks("1234", "PERFECTLY", "BADLY");
+        assertEquals(testMarkList,testStudent1.getMarks());
+        testMarkList.add(MARKS.WELL);
+        testStudent1.addMarks("1234",4);
+        assertEquals(testMarkList,testStudent1.getMarks());
+    }
+
+    @org.junit.Test
+    void getMiddleMark1() {
+        testStudent1.addMarks("1234", 5, 1);
+        assertEquals(MARKS.SATISFACTORILY, testStudent1.getMiddleMark());
+    }
+
+    @org.junit.Test
+    void getMiddleMark2() {
+        assertEquals(null, testStudent1.getMiddleMark());
+    }
+
+    @org.junit.Test
+    void testEquals() {
+        Student testStudent2 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent3 = Student.createNewStudent(33333,"Ivanov Ivan", "1234");
+        Student testStudent4 = Student.createNewStudent(777,"Petrov Pashka", "1234");
+        assertFalse(testStudent1.equals("Ivanov Ivan"));
+        assertTrue(testStudent1.equals(testStudent2));
+        assertFalse(testStudent1.equals(testStudent3));
+        assertFalse(testStudent1.equals(testStudent4));
+    }
+
+    @org.junit.Test
+    void equalID() {
+        assertTrue(testStudent1.equalID(777));
+        assertFalse(testStudent1.equalID(33333));
+    }
+
+    @org.junit.Test
+    void equalFIO() {
+        assertTrue(testStudent1.equalFIO("Ivanov Ivan"));
+        assertFalse(testStudent1.equalFIO("Petrov Pashka"));
+    }
+
+    @org.junit.Test
+    void findStudentinArrayList1() {
+        Student testStudent2 = Student.createNewStudent(777,"Petrov Pashka", "1234");
+        ArrayList<Student> testStudentList = new ArrayList<>(Arrays.asList(testStudent1,testStudent2));
+        assertEquals(testStudent1,Student.findStudentinArrayList(testStudentList,33333));
+        assertEquals(testStudent2,Student.findStudentinArrayList(testStudentList,"Petrov Pashka"));
+    }
+}

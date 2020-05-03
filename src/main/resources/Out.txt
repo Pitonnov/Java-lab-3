@@ -1,0 +1,80 @@
+ALL INFORMATION
+Number of groups: 3
+Number of students: 58
+
+Group: Sun
+Head: Arvidsson Ebba
+Number of students: 19
+Group middle mark: SATISFACTORILY
+ID |FIO                      |Middle Mark     |Marks          
+54 |Samuelsson Astrid        |WELL            |3 2 4 5 1 4 5 4 4 4 4 3 2 4 4 5 4 5 5 2 
+60 |Axelsson Lena            |WELL            |5 1 5 4 5 4 1 3 3 3 2 2 5 4 5 5 1 2 5 5 
+1  |Warner Peter             |SATISFACTORILY  |1 4 1 2 5 2 1 2 5 4 5 2 5 3 2 4 3 1 5 1 
+8  |Shields David            |SATISFACTORILY  |5 4 4 4 4 1 1 2 2 2 4 1 2 1 1 1 1 3 5 4 
+9  |Cook Joseph              |SATISFACTORILY  |5 2 4 1 2 3 3 2 4 2 1 4 1 5 2 5 3 5 4 2 
+10 |Ellis Charles            |SATISFACTORILY  |2 3 2 5 1 1 2 4 4 1 1 1 2 2 1 5 3 2 5 4 
+17 |Reynolds Blake           |SATISFACTORILY  |1 1 3 2 4 4 3 5 4 1 3 5 3 4 5 1 2 4 3 1 
+23 |Ferguson Daniel          |SATISFACTORILY  |5 4 4 1 1 4 1 4 3 5 1 1 3 5 4 4 5 1 2 1 
+24 |Douglas Aldous           |SATISFACTORILY  |2 4 1 4 5 5 2 5 3 4 5 4 4 1 1 2 1 1 4 3 
+25 |Barton Denis             |SATISFACTORILY  |4 5 5 4 2 5 2 5 1 2 3 4 2 1 1 2 5 2 4 5 
+28 |Miles Paul               |SATISFACTORILY  |1 4 1 3 4 4 5 5 3 1 2 5 2 5 1 2 1 2 4 4 
+30 |Thompson Gabriel         |SATISFACTORILY  |5 3 5 2 4 3 5 1 2 3 2 3 1 3 3 1 5 5 4 1 
+34 |Viklund Gun              |SATISFACTORILY  |2 2 2 3 3 3 2 3 1 3 4 2 1 2 5 3 1 2 3 4 
+36 |Arvidsson Ebba           |SATISFACTORILY  |1 2 3 5 5 1 1 3 4 1 5 4 2 2 5 3 2 3 3 4 
+39 |Jansson Viktoria         |SATISFACTORILY  |2 4 1 2 3 2 3 3 1 5 4 2 1 3 3 1 3 2 5 1 
+43 |Magnusson Ann-Marie      |SATISFACTORILY  |5 2 5 1 2 4 2 4 1 1 3 2 4 4 3 4 4 2 5 2 
+47 |Gunnarsson Britt         |SATISFACTORILY  |4 2 1 2 3 1 2 4 5 1 3 4 5 3 5 5 3 5 4 4 
+48 |Sundqvist Ann-Christin   |SATISFACTORILY  |3 1 3 1 1 5 5 4 4 4 1 2 5 4 1 5 5 2 1 2 
+58 |Karlsson Barbro          |SATISFACTORILY  |4 1 2 5 5 2 5 2 3 1 3 1 4 2 1 3 2 4 3 5 
+
+Group: Rain
+Head: Mattsson Ulla-Britt
+Number of students: 19
+Group middle mark: SATISFACTORILY
+ID |FIO                      |Middle Mark     |Marks          
+4  |Hensley Eustace          |WELL            |4 2 5 3 5 3 2 1 5 2 5 5 5 5 4 4 2 2 4 2 
+26 |Terry Steven             |WELL            |3 3 5 4 5 2 4 4 5 5 4 4 5 3 5 4 5 3 1 4 
+32 |Fredriksson Helena       |WELL            |3 2 2 5 5 4 5 5 4 1 5 4 1 5 5 5 2 2 3 3 
+57 |Bergman Lovisa           |WELL            |2 5 5 2 1 5 5 4 5 3 5 3 1 2 4 4 4 4 4 3 
+2  |Porter Gavin             |SATISFACTORILY  |3 4 4 5 4 4 1 5 5 4 4 2 2 5 4 4 2 3 2 1 
+6  |Harris Thomas            |SATISFACTORILY  |4 5 2 1 2 5 1 5 5 2 1 4 4 3 2 5 4 1 2 3 
+7  |Watkins Reynard          |SATISFACTORILY  |4 4 2 4 4 2 2 3 2 2 1 4 5 2 3 4 4 1 1 3 
+12 |Fields Scot              |SATISFACTORILY  |2 1 1 4 2 2 4 1 5 2 3 2 3 2 4 4 3 2 5 5 
+13 |Houston Conrad           |SATISFACTORILY  |4 2 4 1 3 4 4 1 4 3 3 5 3 4 1 2 2 5 3 5 
+18 |Stevens Donald           |SATISFACTORILY  |2 2 5 2 3 5 1 5 1 3 1 5 5 2 5 2 1 2 4 5 
+22 |West William             |SATISFACTORILY  |2 3 1 4 5 3 1 2 3 1 5 4 4 3 2 5 4 3 5 2 
+27 |Evans Donald             |SATISFACTORILY  |5 5 3 5 1 1 3 1 2 4 3 1 3 2 5 4 4 2 2 2 
+37 |Mattsson Ulla-Britt      |SATISFACTORILY  |5 3 2 5 2 3 4 2 2 2 4 4 4 1 1 4 5 4 1 5 
+41 |Abrahamsson Johanna      |SATISFACTORILY  |1 2 2 1 4 2 5 3 4 5 2 5 1 1 1 1 4 4 1 5 
+45 |Svensson Birgit          |SATISFACTORILY  |3 5 4 2 2 1 4 4 2 5 4 2 1 1 4 4 5 4 5 2 
+46 |Nyberg Monica            |SATISFACTORILY  |3 4 2 5 4 5 1 2 5 5 5 5 1 3 5 2 2 2 1 3 
+49 |Hedlund Inga             |SATISFACTORILY  |1 2 5 2 5 3 5 4 2 5 2 2 1 4 1 4 5 5 5 5 
+56 |Hansson Katarina         |SATISFACTORILY  |4 1 1 1 5 4 2 5 2 3 2 3 1 5 2 2 4 4 5 1 
+59 |Persson Hanna            |SATISFACTORILY  |4 4 5 3 5 1 3 3 2 4 1 3 5 1 5 2 2 4 2 3 
+
+Group: Forrest
+Head: Jonsson Erika
+Number of students: 20
+Group middle mark: SATISFACTORILY
+ID |FIO                      |Middle Mark     |Marks          
+15 |McCarthy Joshua          |WELL            |5 1 5 5 5 1 3 4 5 4 4 5 4 2 3 5 1 5 3 2 
+19 |Bates Ronald             |WELL            |5 4 5 5 4 4 4 5 4 4 4 3 2 2 2 1 2 5 3 3 
+35 |Ek Pernilla              |WELL            |5 4 4 1 3 3 2 4 5 1 3 4 4 5 2 5 5 5 2 5 
+3  |Stokes Joseph            |SATISFACTORILY  |5 1 2 5 3 3 1 1 2 5 2 5 3 2 4 5 3 2 1 1 
+5  |Reeves Joseph            |SATISFACTORILY  |3 3 2 3 2 2 3 5 3 5 3 2 5 5 3 4 3 1 5 5 
+11 |Mathews Edward           |SATISFACTORILY  |2 1 5 4 4 1 3 5 2 2 2 2 1 1 5 4 1 1 3 1 
+14 |Casey Robert             |SATISFACTORILY  |3 3 5 4 1 5 5 2 2 1 5 1 5 5 2 4 3 4 4 5 
+16 |Powell Baldwin           |SATISFACTORILY  |3 5 5 5 4 3 1 1 3 3 2 5 4 5 3 2 3 5 3 1 
+20 |Gaines Jack              |SATISFACTORILY  |3 5 4 4 1 2 4 1 1 2 4 1 1 5 4 2 1 2 1 4 
+21 |Flowers David            |SATISFACTORILY  |3 5 1 5 3 2 4 3 2 5 3 3 5 2 3 5 4 3 1 1 
+29 |Chambers Christopher     |SATISFACTORILY  |2 2 4 3 4 2 4 1 5 4 1 4 5 5 1 5 4 4 4 5 
+33 |Isaksson Mona            |SATISFACTORILY  |3 4 3 1 4 4 4 2 4 3 2 3 1 1 1 1 2 4 4 2 
+38 |Jonsson Erika            |SATISFACTORILY  |5 4 5 3 2 1 4 3 5 4 4 5 5 4 5 4 1 1 3 1 
+40 |Andreasson Frida         |SATISFACTORILY  |3 2 3 3 3 4 3 2 2 1 3 4 3 2 1 4 2 2 1 3 
+42 |Jakobsson Julia          |SATISFACTORILY  |4 1 3 5 1 2 1 2 5 3 1 3 5 2 1 5 2 1 4 4 
+44 |Lindberg Ingrid          |SATISFACTORILY  |4 5 2 5 5 4 5 2 4 3 2 3 3 1 1 2 1 2 5 3 
+50 |Bergqvist Anna           |SATISFACTORILY  |5 4 4 2 2 4 2 5 4 4 3 4 2 5 3 1 3 2 4 1 
+51 |Henriksson Cecilia       |SATISFACTORILY  |3 1 1 5 2 3 1 3 4 3 3 5 5 2 5 3 5 3 5 2 
+53 |Falk Maj                 |SATISFACTORILY  |2 2 1 3 5 3 3 5 4 5 5 5 2 1 5 5 1 4 5 2 
+55 |Larsson Gunilla          |SATISFACTORILY  |5 2 4 1 2 5 1 5 3 4 3 5 3 3 3 1 5 3 4 1 
+
