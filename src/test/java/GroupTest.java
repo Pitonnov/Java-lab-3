@@ -8,6 +8,9 @@ public class GroupTest {
 
     @org.junit.Test
     public void createNewGroup() {
+        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent2 = Student.createNewStudent(33333,"Petrov Pashka", "1234");
+        Group testGroup = Group.createNewGroup("TestGroup","1234");
         assertEquals("TestGroup",testGroup.getTitle());
         assertEquals(0,testGroup.getStudents().size());
         assertEquals(null,testGroup.getHead());
@@ -15,6 +18,9 @@ public class GroupTest {
 
     @org.junit.Test
     public void addStudent() {
+        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent2 = Student.createNewStudent(33333,"Petrov Pashka", "1234");
+        Group testGroup = Group.createNewGroup("TestGroup","1234");
         testGroup.addStudent(testStudent1,"1234");
         assertEquals(1,testGroup.getStudents().size());
         assertEquals("Ivanov Ivan",testGroup.getStudents().get(0).getFio());
@@ -23,6 +29,9 @@ public class GroupTest {
 
     @org.junit.Test
     public void chooseHead1() {
+        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent2 = Student.createNewStudent(33333,"Petrov Pashka", "1234");
+        Group testGroup = Group.createNewGroup("TestGroup","1234");
         try{
             testGroup.chooseHead(testStudent1,"1234");
             fail();
@@ -39,6 +48,9 @@ public class GroupTest {
 
     @org.junit.Test
     public void ChooseHead2() {
+        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent2 = Student.createNewStudent(33333,"Petrov Pashka", "1234");
+        Group testGroup = Group.createNewGroup("TestGroup","1234");
         testGroup.chooseHead("Ivanov Ivan","1234");
         assertEquals(null,testGroup.getHead());
         testGroup.addStudent(testStudent1,"1234");
@@ -49,6 +61,9 @@ public class GroupTest {
 
     @org.junit.Test
     public void ChooseHead3() {
+        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent2 = Student.createNewStudent(33333,"Petrov Pashka", "1234");
+        Group testGroup = Group.createNewGroup("TestGroup","1234");
         testGroup.chooseHead(777,"1234");
         assertEquals(null,testGroup.getHead());
         testGroup.addStudent(testStudent1,"1234");
@@ -59,6 +74,9 @@ public class GroupTest {
 
     @org.junit.Test
     public void findStudent1() {
+        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent2 = Student.createNewStudent(33333,"Petrov Pashka", "1234");
+        Group testGroup = Group.createNewGroup("TestGroup","1234");
         try{
             assertEquals(testStudent1,testGroup.findStudent(777));
             fail();
@@ -76,6 +94,9 @@ public class GroupTest {
 
     @org.junit.Test
     public void FindStudent2() {
+        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent2 = Student.createNewStudent(33333,"Petrov Pashka", "1234");
+        Group testGroup = Group.createNewGroup("TestGroup","1234");
         try{
             assertEquals(testStudent1,testGroup.findStudent("Ivanov Ivan"));
             fail();
@@ -93,6 +114,9 @@ public class GroupTest {
 
     @org.junit.Test
     public void getMiddleMark() {
+        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent2 = Student.createNewStudent(33333,"Petrov Pashka", "1234");
+        Group testGroup = Group.createNewGroup("TestGroup","1234");
         assertEquals(null, testGroup.getMiddleMark());
         testStudent1.addMarks("1234",5,1,5,1);
         testStudent2.addMarks("1234",1,5,1,5);
@@ -104,6 +128,9 @@ public class GroupTest {
 
     @org.junit.Test
     public void removeStudent() {
+        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent2 = Student.createNewStudent(33333,"Petrov Pashka", "1234");
+        Group testGroup = Group.createNewGroup("TestGroup","1234");
         testGroup.addStudent(testStudent1,"1234");
         testGroup.removeStudent(testStudent1,"1234");
         assertEquals(0,testGroup.getStudents().size());
