@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class StudentTest {
+    Password password = new Password();
 
     Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
 
