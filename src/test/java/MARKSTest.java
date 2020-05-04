@@ -3,7 +3,7 @@ import org.junit.Test;
 
 public class MARKSTest {
     @org.junit.Test
-    void MARKStoInt() {
+    public void MARKStoInt() {
         assertEquals(1,MARKS.MARKStoInt(MARKS.BADLY));
         assertEquals(2,MARKS.MARKStoInt(MARKS.UNSATISFACTORILY));
         assertEquals(3,MARKS.MARKStoInt(MARKS.SATISFACTORILY));
@@ -12,7 +12,7 @@ public class MARKSTest {
     }
 
     @org.junit.Test
-    void intToMARKS() {
+    public void intToMARKS() {
         assertEquals(MARKS.BADLY,MARKS.intToMARKS(1));
         assertEquals(MARKS.UNSATISFACTORILY,MARKS.intToMARKS(2));
         assertEquals(MARKS.SATISFACTORILY,MARKS.intToMARKS(3));
@@ -23,12 +23,12 @@ public class MARKSTest {
     }
 
     @org.junit.Test
-    void getMaxMark() {
+    public void getMaxMark() {
         assertEquals(MARKS.PERFECTLY,MARKS.getMaxMark());
     }
 
     @org.junit.Test
-    void getMinMark() {
+    public void getMinMark() {
         assertEquals(MARKS.BADLY,MARKS.getMinMark());
     }
 }
