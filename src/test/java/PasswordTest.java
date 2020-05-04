@@ -4,7 +4,7 @@ import org.junit.Test;
 public class PasswordTest {
 
     @Test
-    void checkPassword() {
+    public void checkPassword() {
         try{
             Password.checkPassword("777"); //password is 1234, not 777
             fail();
@@ -15,7 +15,7 @@ public class PasswordTest {
     }
 
     @Test
-    void changePassword() throws DeaneryExceptions.PasswordException {
+    public void changePassword() throws DeaneryExceptions.PasswordException {
         Password.changePassword("1234","777");
         Password.checkPassword("777");
     }
