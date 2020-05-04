@@ -2,9 +2,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class GroupTest {
-    Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
-    Student testStudent2 = Student.createNewStudent(33333,"Petrov Pashka", "1234");
-    Group testGroup = Group.createNewGroup("TestGroup","1234");
 
     @org.junit.Test
     public void createNewGroup() {
