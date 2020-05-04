@@ -9,25 +9,25 @@ public class DeaneryTest {
     Deanery testDeanery = Deanery.createNewDeanery("1234");
 
     @org.junit.Test
-    void createNewDeanery() {
+    public void createNewDeanery() {
         assertEquals(0,testDeanery.getGroups().size());
         assertEquals(0,testDeanery.getStudents().size());
     }
 
     @org.junit.Test
-    void createStudentsFromFile() {
+    public void createStudentsFromFile() {
         testDeanery.createStudentsFromFile("./src/main/resources/students.txt","1234");
         assertEquals(60,testDeanery.getStudents().size());
     }
 
     @org.junit.Test
-    void createGroupsFromFile() {
+    public void createGroupsFromFile() {
         testDeanery.createGroupsFromFile("./src/main/resources/groups.txt","1234");
         assertEquals(3,testDeanery.getGroups().size());
     }
 
     @org.junit.Test
-    void createGroupsFromJSONfile(){
+    public void createGroupsFromJSONfile(){
         testDeanery.createGroupsFromJSONfile("./src/main/resources/Groups and students.json","1234");
         assertEquals(3,testDeanery.getGroups().size());
         assertEquals(60,testDeanery.getStudents().size());
@@ -35,7 +35,7 @@ public class DeaneryTest {
 
 
     @org.junit.Test
-    void addAllStudentsToRandomGroups() {
+    public void addAllStudentsToRandomGroups() {
         testDeanery.createGroupsFromFile("./src/main/resources/groups.txt","1234");
         testDeanery.createStudentsFromFile("./src/main/resources/students.txt","1234");
         testDeanery.addAllStudentsToRandomGroups("1234");
@@ -48,7 +48,7 @@ public class DeaneryTest {
     }
 
     @org.junit.Test
-    void electHeads() {
+    public void electHeads() {
         testDeanery.createGroupsFromFile("./src/main/resources/groups.txt","1234");
         testDeanery.createStudentsFromFile("./src/main/resources/students.txt","1234");
         testDeanery.addAllStudentsToRandomGroups("1234");
@@ -61,7 +61,7 @@ public class DeaneryTest {
     }
 
     @org.junit.Test
-    void addRandomMarks() {
+    public void addRandomMarks() {
         testDeanery.createGroupsFromFile("./src/main/resources/groups.txt","1234");
         testDeanery.createStudentsFromFile("./src/main/resources/students.txt","1234");
         testDeanery.addRandomMarks(10,"1234");
@@ -81,7 +81,7 @@ public class DeaneryTest {
     }
 
     @org.junit.Test
-    void ratingStatistics() {
+    public void ratingStatistics() {
         testDeanery.createGroupsFromFile("./src/main/resources/groups.txt","1234");
         testDeanery.createStudentsFromFile("./src/main/resources/students.txt","1234");
         testDeanery.addAllStudentsToRandomGroups("1234");
@@ -98,7 +98,7 @@ public class DeaneryTest {
     }
 
     @org.junit.Test
-    void changeGroup() {
+    public void changeGroup() {
         testDeanery.createGroupsFromFile("./src/main/resources/groups.txt","1234");
         testDeanery.createStudentsFromFile("./src/main/resources/students.txt","1234");
         testDeanery.addAllStudentsToRandomGroups("1234");
@@ -119,7 +119,7 @@ public class DeaneryTest {
     }
 
     @org.junit.Test
-    void removeStudentFromDeanery() {
+    public void removeStudentFromDeanery() {
         testDeanery.createGroupsFromFile("./src/main/resources/groups.txt","1234");
         testDeanery.createStudentsFromFile("./src/main/resources/students.txt","1234");
         testDeanery.addAllStudentsToRandomGroups("1234");
@@ -132,7 +132,7 @@ public class DeaneryTest {
     }
 
     @org.junit.Test
-    void removeStudentsByStatistics() {
+    public void removeStudentsByStatistics() {
         testDeanery.createGroupsFromFile("./src/main/resources/groups.txt","1234");
         testDeanery.createStudentsFromFile("./src/main/resources/students.txt","1234");
         testDeanery.addAllStudentsToRandomGroups("1234");
