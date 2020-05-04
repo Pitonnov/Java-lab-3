@@ -2,7 +2,6 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MARKSTest {
-	
     @org.junit.Test
     void MARKStoInt() {
         assertEquals(1,MARKS.MARKStoInt(MARKS.BADLY));

@@ -1,4 +1,10 @@
-import java.io.*;
+import org.apache.commons.io.FileUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.NoSuchFileException;
@@ -90,6 +96,46 @@ public class Deanery {
             Password.printAnswer();
         }
     }
+    void createGroupsFromJSONfile(String fileDirection, String password) throws org.json.JSONException
+        {
+        try {
+            Password.checkPassword(password);
+            try {
+                File jsfile = new File(fileDirection);
+                String content = FileUtils.readFileToString(jsfile,"utf-8");
+                JSONObject jsdeanery = new JSONObject(content);
+                JSONArray jsStudents = (JSONArray) jsdeanery.get("students");
+                JSONArray jsGroups = (JSONArray) jsdeanery.get("groups");
+                for (Object obj : jsGroups) {
+                    Group group = Group.createNewGroup(((JSONObject) obj).get("group").toString(),password);
+                    this.getGroups().add(group);
+                }
+                for (Object obj : jsStudents) {
+                    Student student = Student.createNewStudent(
+                            Integer.parseInt(((JSONObject) obj).get("id").toString()),
+                            ((JSONObject) obj).get("fio").toString(),
+                            password);
+                    this.getStudents().add(student);
+                }
+            }
+            catch (NoSuchFileException e){
+                System.out.println("File "+"'"+fileDirection+"'"+" not found");
+                System.exit(1);
+            }
+            catch (InvalidPathException e){
+                System.out.println("Wrong direction "+"'"+fileDirection+"'");
+                System.exit(1);
+            }
+            catch (IOException e) {
+                System.out.println("File "+"'"+fileDirection+"'"+" reading error");
+                System.exit(1);
+            }
+        }
+        catch (DeaneryExceptions.PasswordException e){
+            Password.printAnswer();
+        }
+    }
+
 //3. add students to random groups
     void addAllStudentsToRandomGroups(String password){
         try {

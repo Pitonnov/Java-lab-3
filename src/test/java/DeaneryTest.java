@@ -27,6 +27,14 @@ public class DeaneryTest {
     }
 
     @org.junit.Test
+    void createGroupsFromJSONfile(){
+        testDeanery.createGroupsFromJSONfile("./src/main/resources/Groups and students.json","1234");
+        assertEquals(3,testDeanery.getGroups().size());
+        assertEquals(60,testDeanery.getStudents().size());
+    }
+
+
+    @org.junit.Test
     void addAllStudentsToRandomGroups() {
         testDeanery.createGroupsFromFile("./src/main/resources/groups.txt","1234");
         testDeanery.createStudentsFromFile("./src/main/resources/students.txt","1234");
