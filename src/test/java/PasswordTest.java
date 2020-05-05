@@ -21,5 +21,6 @@ public class PasswordTest {
     public void changePassword() throws DeaneryExceptions.PasswordException {
         Password.changePassword("1234","777");
         Password.checkPassword("777");
+        Password.changePassword("777","1234"); //for another tests
     }
 }
