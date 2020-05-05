@@ -6,17 +6,15 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class StudentTest {
-
-    Password.changePassword("777","1234");
     
     @org.junit.Test
     public void addMarks1() {
-        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "1234");
+        Student testStudent1 = Student.createNewStudent(777,"Ivanov Ivan", "777");
         ArrayList<MARKS> testMarkList = new ArrayList(Arrays.asList(MARKS.PERFECTLY,MARKS.BADLY));
         testStudent1.addMarks("1234", MARKS.PERFECTLY, MARKS.BADLY);
         assertEquals(testMarkList,testStudent1.getMarks());
         testMarkList.add(MARKS.WELL);
-        testStudent1.addMarks("1234","WELL");
+        testStudent1.addMarks("777","WELL");
         assertEquals(testMarkList,testStudent1.getMarks());
     }
 
