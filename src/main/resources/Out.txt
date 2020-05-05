@@ -1,4 +1,79 @@
 ALL INFORMATION
-Number of groups: 0
-Number of students: 0
+Number of groups: 3
+Number of students: 57
+
+Group: Sun
+Head: Reynolds Blake
+Number of students: 24
+Group middle mark: SATISFACTORILY
+ID |FIO                      |Middle Mark     |Marks          
+23 |Ferguson Daniel          |WELL            |4 2 4 5 4 4 4 2 4 3 1 3 3 3 5 1 4 5 5 5 
+2  |Porter Gavin             |SATISFACTORILY  |2 2 3 4 3 2 2 1 5 2 4 3 4 1 2 2 5 5 1 1 
+8  |Shields David            |SATISFACTORILY  |2 1 1 5 1 3 2 4 2 4 5 5 1 5 3 2 4 5 2 1 
+14 |Casey Robert             |SATISFACTORILY  |3 5 4 4 1 5 5 4 4 3 1 1 2 2 2 4 2 1 4 2 
+15 |McCarthy Joshua          |SATISFACTORILY  |4 2 2 5 4 3 5 3 3 5 3 1 4 2 2 1 2 1 3 3 
+17 |Reynolds Blake           |SATISFACTORILY  |5 3 5 1 2 2 2 3 1 3 3 1 4 3 1 4 5 3 2 1 
+20 |Gaines Jack              |SATISFACTORILY  |1 2 4 5 5 1 4 3 3 4 5 1 2 2 1 2 1 4 2 1 
+21 |Flowers David            |SATISFACTORILY  |4 5 4 3 4 3 3 1 4 1 1 3 2 2 4 3 1 4 4 1 
+22 |West William             |SATISFACTORILY  |1 1 5 3 5 5 5 3 1 4 1 5 5 1 5 5 2 4 4 4 
+25 |Barton Denis             |SATISFACTORILY  |5 2 2 5 2 5 5 4 1 2 4 1 4 1 5 4 5 4 2 4 
+28 |Miles Paul               |SATISFACTORILY  |5 2 2 1 5 5 1 5 1 5 5 4 3 5 2 5 3 5 1 2 
+31 |Lundqvist Amanda         |SATISFACTORILY  |4 5 1 1 4 2 4 3 5 5 1 1 2 1 2 5 1 1 4 4 
+32 |Fredriksson Helena       |SATISFACTORILY  |1 1 4 2 2 2 3 1 1 1 2 5 3 4 4 5 3 1 1 5 
+34 |Viklund Gun              |SATISFACTORILY  |3 1 3 1 4 5 3 3 2 3 5 5 1 3 1 4 1 2 5 4 
+40 |Andreasson Frida         |SATISFACTORILY  |5 5 1 3 4 1 2 3 2 1 5 5 4 3 1 1 5 3 5 1 
+41 |Abrahamsson Johanna      |SATISFACTORILY  |3 2 2 4 1 4 2 3 1 2 4 1 4 1 2 5 3 2 5 1 
+44 |Lindberg Ingrid          |SATISFACTORILY  |3 2 1 3 2 4 5 1 3 4 1 1 1 5 5 5 3 3 4 1 
+46 |Nyberg Monica            |SATISFACTORILY  |5 5 5 1 1 4 3 3 4 1 2 4 2 4 2 4 5 1 5 3 
+47 |Gunnarsson Britt         |SATISFACTORILY  |1 5 1 4 1 4 4 3 1 1 2 4 2 2 3 3 5 3 3 5 
+49 |Hedlund Inga             |SATISFACTORILY  |2 2 5 4 5 2 5 5 4 3 3 4 4 4 5 2 5 1 2 1 
+52 |Lundberg Gerd            |SATISFACTORILY  |2 2 5 3 4 5 5 1 4 2 4 5 4 2 4 1 1 3 1 5 
+57 |Bergman Lovisa           |SATISFACTORILY  |2 4 3 1 4 4 3 2 2 1 2 5 4 1 4 3 2 2 2 1 
+58 |Karlsson Barbro          |SATISFACTORILY  |2 3 1 5 1 5 3 2 3 1 5 3 1 4 3 3 5 3 5 5 
+59 |Persson Hanna            |SATISFACTORILY  |1 4 4 1 1 5 1 5 2 5 3 3 4 1 2 2 4 2 5 5 
+
+Group: Rain
+Head: Warner Peter
+Number of students: 17
+Group middle mark: SATISFACTORILY
+ID |FIO                      |Middle Mark     |Marks          
+1  |Warner Peter             |SATISFACTORILY  |4 5 3 1 2 4 2 3 3 4 1 1 3 5 5 2 3 1 3 5 
+4  |Hensley Eustace          |SATISFACTORILY  |2 3 4 2 5 2 5 3 3 2 1 1 3 2 5 3 3 1 2 5 
+5  |Reeves Joseph            |SATISFACTORILY  |1 3 1 2 1 5 5 1 3 4 5 2 4 1 3 2 2 2 4 4 
+6  |Harris Thomas            |SATISFACTORILY  |3 2 4 5 5 1 1 1 3 4 2 3 2 4 1 1 5 1 1 4 
+9  |Cook Joseph              |SATISFACTORILY  |1 4 5 5 5 3 1 5 5 3 5 1 4 2 3 3 4 2 5 2 
+11 |Mathews Edward           |SATISFACTORILY  |3 4 5 5 1 1 5 3 1 4 1 4 3 5 4 4 3 2 3 2 
+12 |Fields Scot              |SATISFACTORILY  |4 1 3 2 4 5 3 3 3 4 2 3 1 1 4 5 4 4 3 5 
+24 |Douglas Aldous           |SATISFACTORILY  |5 5 3 1 3 1 2 5 1 3 1 1 1 4 5 5 3 4 2 5 
+29 |Chambers Christopher     |SATISFACTORILY  |2 3 2 5 3 3 1 1 1 1 5 1 5 3 5 2 5 2 5 2 
+33 |Isaksson Mona            |SATISFACTORILY  |2 3 3 3 1 4 3 2 4 4 1 4 2 5 1 5 5 4 4 5 
+36 |Arvidsson Ebba           |SATISFACTORILY  |3 1 3 1 5 1 3 3 3 2 2 4 1 5 1 3 5 4 5 4 
+37 |Mattsson Ulla-Britt      |SATISFACTORILY  |4 2 4 4 4 5 1 4 4 3 4 2 4 1 3 2 1 1 4 2 
+39 |Jansson Viktoria         |SATISFACTORILY  |4 5 3 4 3 2 3 5 3 2 3 3 5 3 2 2 5 2 5 1 
+43 |Magnusson Ann-Marie      |SATISFACTORILY  |2 2 1 5 3 2 4 5 4 5 2 5 2 5 3 4 2 5 1 5 
+45 |Svensson Birgit          |SATISFACTORILY  |4 2 4 1 1 4 4 2 3 2 2 5 4 3 1 3 5 5 3 5 
+50 |Bergqvist Anna           |SATISFACTORILY  |2 1 3 1 1 3 5 3 4 1 4 2 4 3 5 2 4 4 4 4 
+56 |Hansson Katarina         |SATISFACTORILY  |5 1 3 4 5 4 5 5 3 1 4 4 3 3 3 2 2 3 2 4 
+
+Group: Forrest
+Head: Evans Donald
+Number of students: 16
+Group middle mark: SATISFACTORILY
+ID |FIO                      |Middle Mark     |Marks          
+3  |Stokes Joseph            |WELL            |4 3 4 5 1 3 3 4 5 4 5 4 4 2 1 5 3 4 2 4 
+7  |Watkins Reynard          |WELL            |4 5 3 1 5 1 5 1 4 4 3 5 3 3 4 3 3 5 5 4 
+55 |Larsson Gunilla          |WELL            |5 1 4 3 3 4 3 4 4 3 4 3 4 2 5 5 3 4 2 5 
+10 |Ellis Charles            |SATISFACTORILY  |3 2 3 5 4 2 4 5 3 3 3 2 1 5 5 3 4 3 5 1 
+13 |Houston Conrad           |SATISFACTORILY  |1 5 1 4 5 3 3 5 4 5 5 4 1 4 2 4 4 4 2 3 
+18 |Stevens Donald           |SATISFACTORILY  |1 4 4 4 3 5 4 2 4 1 2 3 2 3 3 2 3 5 1 2 
+19 |Bates Ronald             |SATISFACTORILY  |3 1 4 2 4 4 5 2 1 5 4 1 5 4 5 1 1 3 5 4 
+26 |Terry Steven             |SATISFACTORILY  |1 3 2 3 1 3 5 3 4 1 4 4 2 3 3 4 4 3 2 1 
+27 |Evans Donald             |SATISFACTORILY  |5 2 5 1 3 2 1 4 2 4 1 5 1 5 3 3 5 5 1 4 
+30 |Thompson Gabriel         |SATISFACTORILY  |3 2 3 4 3 3 3 5 5 5 1 4 1 3 2 5 5 1 4 4 
+35 |Ek Pernilla              |SATISFACTORILY  |1 4 1 5 4 4 3 4 1 5 5 4 3 1 4 4 4 1 5 2 
+42 |Jakobsson Julia          |SATISFACTORILY  |4 2 4 1 2 3 5 4 2 4 5 1 3 2 4 5 1 5 1 4 
+48 |Sundqvist Ann-Christin   |SATISFACTORILY  |5 1 5 5 3 2 1 4 1 2 2 1 3 5 3 1 4 4 2 5 
+51 |Henriksson Cecilia       |SATISFACTORILY  |5 4 2 1 1 4 2 3 5 2 4 1 2 4 2 5 3 2 3 2 
+54 |Samuelsson Astrid        |SATISFACTORILY  |4 4 4 4 2 2 2 3 2 5 3 1 4 4 3 2 4 2 2 3 
+60 |Axelsson Lena            |SATISFACTORILY  |2 1 1 5 5 1 5 5 3 5 3 3 3 3 4 2 5 4 1 4 
 

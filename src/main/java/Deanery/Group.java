@@ -1,3 +1,5 @@
+package Deanery;
+
 import java.util.ArrayList;
 
 public class Group {
@@ -12,9 +14,9 @@ public class Group {
         this.head = null;
     }
 //getters
-    String getTitle(){return this.title;}
-    ArrayList<Student> getStudents(){return this.students;}
-    Student getHead(){ return this.head; }
+    public String getTitle(){return this.title;}
+    public ArrayList<Student> getStudents(){return this.students;}
+    public Student getHead(){ return this.head; }
 //methods
 //1. create new group (factory)
     public static Group createNewGroup(String title, String password){
@@ -27,7 +29,7 @@ public class Group {
         }
     }
 //2. add student
-    void addStudent(Student student, String password) {
+    public void addStudent(Student student, String password) {
         try {
             Password.checkPassword(password);
             this.students.add(student);
@@ -37,7 +39,7 @@ public class Group {
         }
     }
 //3. choose the head
-    void chooseHead(Student student, String password)
+    public void chooseHead(Student student, String password)
             throws DeaneryExceptions.GroupDoesntContainStudentException{
         try {
             Password.checkPassword(password);
@@ -49,7 +51,7 @@ public class Group {
             Password.printAnswer();
         }
     }
-    void chooseHead(int headId, String password){
+    public void chooseHead(int headId, String password){
         try {
             Password.checkPassword(password);
             if (Student.findStudentinArrayList(this.students, headId) == null) {
@@ -62,7 +64,7 @@ public class Group {
             Password.printAnswer();
         }
     }
-    void chooseHead(String headFio, String password){
+    public void chooseHead(String headFio, String password){
         try {
             Password.checkPassword(password);
             if (Student.findStudentinArrayList(this.students, headFio) == null) {
@@ -76,18 +78,18 @@ public class Group {
         }
     }
 //4. find student in the group
-    Student findStudent(int id) throws DeaneryExceptions.GroupDoesntContainStudentException{
+    public Student findStudent(int id) throws DeaneryExceptions.GroupDoesntContainStudentException{
         if(Student.findStudentinArrayList(this.students, id) == null)
             throw new DeaneryExceptions.GroupDoesntContainStudentException();
         return Student.findStudentinArrayList(this.students, id);
     }
-    Student findStudent(String fio) throws DeaneryExceptions.GroupDoesntContainStudentException{
+    public Student findStudent(String fio) throws DeaneryExceptions.GroupDoesntContainStudentException{
         if(Student.findStudentinArrayList(this.students, fio) == null)
             throw new DeaneryExceptions.GroupDoesntContainStudentException();
         return Student.findStudentinArrayList(this.students, fio);
     }
 //5. getting the middle mark
-    MARKS getMiddleMark(){
+    public MARKS getMiddleMark(){
         int sumMiddleMarkValue = 0;
         if (this.students.size() == 0)
             return null;
@@ -103,7 +105,7 @@ public class Group {
         return MARKS.intToMARKS(middleMarkValue);
     }
 //6. remove student
-    void removeStudent(Student student, String password){
+    public void removeStudent(Student student, String password){
         try {
             Password.checkPassword(password);
             student.setGroup(null);

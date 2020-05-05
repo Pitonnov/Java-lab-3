@@ -1,4 +1,4 @@
-import java.awt.*;
+package Deanery;
 
 public class Password {
 //fields

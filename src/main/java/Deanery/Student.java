@@ -1,3 +1,5 @@
+package Deanery;
+
 import java.util.ArrayList;
 
 public class Student {
@@ -14,12 +16,12 @@ public class Student {
         this.marks = new ArrayList<>();
     }
 //getters
-    int getId(){return this.id;}
-    String getFio(){return this.fio;}
-    Group getGroup(){return this.group;}
-    ArrayList<MARKS> getMarks(){return this.marks;}
+    public int getId(){return this.id;}
+    public String getFio(){return this.fio;}
+    public Group getGroup(){return this.group;}
+    public ArrayList<MARKS> getMarks(){return this.marks;}
 //setters
-    void setGroup(Group group) { this.group = group; }
+    public void setGroup(Group group) { this.group = group; }
 //methods
 //1. create new student (factory)
     public static Student createNewStudent(int id, String fio, String password){
@@ -32,7 +34,7 @@ public class Student {
         }
     }
 //2. add marks
-    void addMarks(String password, MARKS ... marks){
+    public void addMarks(String password, MARKS ... marks){
         try {
             Password.checkPassword(password);
             for (MARKS mark : marks) {
@@ -42,7 +44,7 @@ public class Student {
             Password.printAnswer();
         }
     }
-    void addMarks(String password, int ... markValues){
+    public void addMarks(String password, int ... markValues){
         try {
             Password.checkPassword(password);
             for (int markValue : markValues) {
@@ -52,7 +54,7 @@ public class Student {
             Password.printAnswer();
         }
     }
-    void addMarks(String password, String ... markNames){
+    public void addMarks(String password, String ... markNames){
         try {
             Password.checkPassword(password);
             for (String markName : markNames) {
@@ -63,7 +65,7 @@ public class Student {
         }
     }
 //3. getting the middle mark
-    MARKS getMiddleMark() {
+    public MARKS getMiddleMark() {
             if(this.getMarks().size() == 0){
                 System.out.println(this.getFio()+" has not marks");
                 return null;

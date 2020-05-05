@@ -1,7 +1,8 @@
+package Deanery;
+
 import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -37,12 +38,12 @@ public class Deanery {
     }
 //enums
     enum OUTPUTS{GROUPS, STUDENTS, ALL}
-    //getters
-    ArrayList<Group> getGroups(){ return groups;}
-    ArrayList<Student> getStudents(){ return students;}
+//getters
+    public ArrayList<Group> getGroups(){ return groups;}
+    public ArrayList<Student> getStudents(){ return students;}
 //methods
 //1. creating students from a file
-    void createStudentsFromFile(String fileDirection, String password) {
+    public void createStudentsFromFile(String fileDirection, String password) {
         try {
             Password.checkPassword(password);
             try {
@@ -70,7 +71,7 @@ public class Deanery {
         }
     }
 //2. creating groups from a file
-    void createGroupsFromFile(String fileDirection, String password) {
+    public void createGroupsFromFile(String fileDirection, String password) {
         try {
             Password.checkPassword(password);
             try {
@@ -96,7 +97,7 @@ public class Deanery {
             Password.printAnswer();
         }
     }
-    void createGroupsFromJSONfile(String fileDirection, String password) throws org.json.JSONException
+    public void createGroupsFromJSONfile(String fileDirection, String password) throws org.json.JSONException
         {
         try {
             Password.checkPassword(password);
@@ -137,7 +138,7 @@ public class Deanery {
     }
 
 //3. add students to random groups
-    void addAllStudentsToRandomGroups(String password){
+    public void addAllStudentsToRandomGroups(String password){
         try {
             Password.checkPassword(password);
             for (Student student : this.students) {
@@ -151,7 +152,7 @@ public class Deanery {
         }
     }
 //4. random heads election
-    void electHeads(String password){
+    public void electHeads(String password){
         try {
             Password.checkPassword(password);
             for (Group group : this.groups) {
@@ -173,7 +174,7 @@ public class Deanery {
         }
     }
 //5. add random marks
-    void addRandomMarks(int numberOfMarks, String password){
+    public void addRandomMarks(int numberOfMarks, String password){
         try {
             Password.checkPassword(password);
             int maxMark = MARKS.MARKStoInt(MARKS.getMaxMark());
@@ -190,7 +191,7 @@ public class Deanery {
         }
     }
 //6. rating statistics
-    void ratingStatistics() {
+    public void ratingStatistics() {
         Comparator<Group> compGrByMiddleMark = new Comparator<Group>() {
             @Override
             public int compare(Group g1, Group g2) {
@@ -214,7 +215,7 @@ public class Deanery {
         }
     }
 //7. student rotation around groups
-    void changeGroup(String fio, String tittleNewGroup, String password){
+    public void changeGroup(String fio, String tittleNewGroup, String password){
         try {
             Password.checkPassword(password);
             Student student = Student.findStudentinArrayList(this.students, fio);
@@ -227,7 +228,7 @@ public class Deanery {
             Password.printAnswer();
         }
     }
-    void changeGroup(int id, String tittleNewGroup, String password){
+    public void changeGroup(int id, String tittleNewGroup, String password){
         try {
             Password.checkPassword(password);
             Student student = Student.findStudentinArrayList(this.students, id);
@@ -241,7 +242,7 @@ public class Deanery {
         }
     }
 //8. students dismissing
-    void removeStudentFromDeanery(Student student, String password){
+    public void removeStudentFromDeanery(Student student, String password){
         try {
             Password.checkPassword(password);
             student.getGroup().removeStudent(student, password);
@@ -251,7 +252,7 @@ public class Deanery {
             Password.printAnswer();
         }
     }
-    void removeStudentFromDeanery(String fio, String password){
+    public void removeStudentFromDeanery(String fio, String password){
         try {
             Password.checkPassword(password);
             Student student = Student.findStudentinArrayList(this.students, fio);
@@ -262,7 +263,7 @@ public class Deanery {
             Password.printAnswer();
         }
     }
-    void removeStudentFromDeanery(int id, String password){
+    public void removeStudentFromDeanery(int id, String password){
         try {
             Password.checkPassword(password);
             Student student = Student.findStudentinArrayList(this.students, id);
@@ -273,7 +274,7 @@ public class Deanery {
             Password.printAnswer();
         }
     }
-    void removeStudentsByStatistics(MARKS limitMark, String password){
+    public void removeStudentsByStatistics(MARKS limitMark, String password){
         try {
             Password.checkPassword(password);
             this.ratingStatistics();
@@ -337,7 +338,7 @@ public class Deanery {
         }
     }
 //9.1 output to display
-    void outputToDisplay(String outputParameter, String password) {
+    public void outputToDisplay(String outputParameter, String password) {
         try {
             Password.checkPassword(password);
             this.output(System.out,outputParameter);
@@ -347,7 +348,7 @@ public class Deanery {
         }
     }
 //9.2 output to file
-    void outputToFile(String fileDirection, String outputParameter, String password) {
+    public void outputToFile(String fileDirection, String outputParameter, String password) {
         try {
             Password.checkPassword(password);
             try {
@@ -370,7 +371,7 @@ public class Deanery {
     }
 // others
 // find group by tittle
-    Group findGroupByTittle(String tittle){
+    public Group findGroupByTittle(String tittle){
         Group resultGroup = null;
         for (Group group : this.groups) {
             if (group.getTitle().equals(tittle)){

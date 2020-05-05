@@ -1,3 +1,5 @@
+package Deanery;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -15,10 +17,10 @@ public enum MARKS {
 //constructor
     MARKS(int markValue){ this.markValue = markValue; }
 //methods
-    static int MARKStoInt(MARKS mark){
+    public static int MARKStoInt(MARKS mark){
         return mark.markValue;
     }
-    static MARKS intToMARKS(int value){
+    public static MARKS intToMARKS(int value){
         ArrayList<MARKS> allMarks = new ArrayList<>(Arrays.asList(MARKS.values()));
         Comparator<MARKS> compMARKS = (m1, m2) -> {
             int result = m1.markValue - m2.markValue;
@@ -41,7 +43,7 @@ public enum MARKS {
         return resultMARK;
     }
 
-    static MARKS getMaxMark(){
+    public static MARKS getMaxMark(){
         int maxMarkValue = 0;
         for (MARKS mark : MARKS.values()) {
             if (MARKS.MARKStoInt(mark) > maxMarkValue){
@@ -50,7 +52,7 @@ public enum MARKS {
         }
         return MARKS.intToMARKS(maxMarkValue);
     }
-    static MARKS getMinMark(){
+    public static MARKS getMinMark(){
         int minMarkValue = MARKS.MARKStoInt(MARKS.getMaxMark());
         for (MARKS mark : MARKS.values()) {
             if (MARKS.MARKStoInt(mark) < minMarkValue){
