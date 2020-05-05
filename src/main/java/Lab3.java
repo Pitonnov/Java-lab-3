@@ -39,6 +39,7 @@ public class Lab3 {
             deanery1.ratingStatistics();
             deanery1.removeStudentsByStatistics(MARKS.UNSATISFACTORILY,"777");
             deanery1.outputToFile(outputFileDirection, "ALL", "777");
+            Password.changePassword("777","1234"); //for running tests
         }
         catch (org.json.JSONException e) {
             System.out.println("Error of syntax in .json-file");
