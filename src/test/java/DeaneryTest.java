@@ -1,37 +1,50 @@
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.Assert.assertEquals;
 
-class DeaneryTest {
+@RunWith(value = Parameterized.class)
+public class DeaneryTest {
+    private String expected;
+    private int id;
+    private int id2;
+    private int id3;
 
-    Deanery testDeanary = new Deanery("Testst.json","Testgr.json");
+    Deanery testDeanary = new Deanery("Testst.json", "Testgr.json");
 
-    @BeforeEach
-    void setup1(){
+    @Before
+    public void setup() {
         testDeanary.distributeToGroups();
         testDeanary.Exam();
         testDeanary.Statistic();
     }
 
-
-    @ParameterizedTest
-    @CsvSource({ "Студент1, 100", "Студент2, 101" })
-    void changeGroup(String argument, int arg) {
-        assertEquals(argument,testDeanary.changeGroup("Группа1","Группа2",arg));
+    public DeaneryTest(String expected, int id,int id2,int id3) {
+        this.expected = expected;
+        this.id = id;
+        this.id2 = id2;
+        this.id3 = id3;
     }
 
+    @Parameterized.Parameters()
+    public static Collection<Object[]> data() {
+        return Arrays.asList(new Object[][]{
+                {"Студент1", 100,150,170},
+                {"Студент2", 101,190,200}
+        });
+    }
 
     @Test
-    void headchoice() {
+    public void changeGroup() {
+        assertEquals(expected, testDeanary.changeGroup("Группа1", "Группа2", id));
+    }
+
+    @Test
+    public void headchoice() {
         List<Group> test = testDeanary.getGroups();
         ArrayList<Student> heads = new ArrayList<>();
         Student test1 = Student.generate(1000,"Староста");
@@ -48,17 +61,19 @@ class DeaneryTest {
     }
 
     @Test
-    void execeptStudent() {
+    public void execeptStudent() {
         List<Group> test = testDeanary.getGroups();
         Student test1 = Student.generate(1000,"Староста");
         test.get(0).addStudent(test1);
         assertEquals(test1,testDeanary.ExeceptStudent(1000));
     }
 
-    @ParameterizedTest
-    @ValueSource(ints = { 150, 170,190,200 })
-    void execeptStudent1(int arg) throws NoSuchElementException {
-        assertThrows(NoSuchElementException.class, () -> testDeanary.ExeceptStudent(arg));
+    @Test (expected = NoSuchElementException.class)
+    public void execeptStudent1() throws NoSuchElementException {
+        testDeanary.ExeceptStudent(id2);
     }
-
+    @Test (expected = NoSuchElementException.class)
+    public void execeptStudent2() throws NoSuchElementException {
+        testDeanary.ExeceptStudent(id3);
+    }
 }

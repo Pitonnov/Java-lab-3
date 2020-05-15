@@ -1,59 +1,79 @@
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.Arrays;
+import java.util.Collection;
 
-class StudentTest {
+import static org.junit.Assert.*;
+
+@RunWith(value = Parameterized.class)
+public class StudentTest {
+    private int mark;
+    private int mark1;
 
     Student st = Student.generate(1000,"Студент");
 
+    public StudentTest(int mark,int mark1) {
+        this.mark = mark;
+        this.mark1 = mark1;
+    }
+
+    @Parameterized.Parameters()
+    public static Collection<Object[]> data() {
+        return Arrays.asList(new Object[][]{
+                {5,0},
+                {3,1},
+                {2,-5},
+                {5,6},
+                {4,8}
+        });
+    }
     @Test
-    void getGroup() {
+    public void getGroup() {
         Group gr = Group.generate("Тест1");
         st.setGroup(gr);
         assertEquals(gr,st.getGroup());
     }
 
     @Test
-    void testToString() {
+    public void testToString() {
         assertEquals("Студент",st.toString());
     }
 
     @Test
-    void getFio() {
+    public void getFio() {
         assertEquals("Студент",st.toString());
     }
 
     @Test
-    void getId() {
+    public void getId() {
         assertEquals(1000,st.getId());
     }
 
     @Test
-    void setGroup() {
+    public void setGroup() {
         Group newgroup = Group.generate("Тест2");
         st.setGroup(newgroup);
         assertEquals("Тест2",st.getGroup().getTitle());
     }
 
-    @ParameterizedTest
-    @ValueSource(ints = {5,3,2,5,4})
-    void addMarks(int args) {
+    @Test
+    public void addMarks() {
         try{
-            st.addMarks(args);
+            st.addMarks(mark);
         }catch (BadMarkException e){
             e.printStackTrace();
         }
         assertNotEquals(0,st.averageMark());
     }
-    @ParameterizedTest
-    @ValueSource(ints = {0,1,-5,6,8})
-    void addMarks2(int args) throws BadMarkException{
-        assertThrows(BadMarkException.class, () -> st.addMarks(args));
+
+    @Test (expected = BadMarkException.class)
+    public void addMarks2() throws BadMarkException{
+        st.addMarks(mark1);
     }
     @Test
-    void averageMark() {
+    public void averageMark() {
         try{
             for (int i =0;i<10;i++){
                 st.addMarks(3);
@@ -62,6 +82,6 @@ class StudentTest {
         }catch (BadMarkException e){
             e.printStackTrace();
         }
-        assertEquals(2.5,st.averageMark());
+        assertEquals(2.5,st.averageMark(),0.1);
     }
 }
