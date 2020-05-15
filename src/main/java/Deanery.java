@@ -211,6 +211,7 @@ class Deanery {
         Student st = null;
         for (Group i: groups){
             st = i.ExeceptStudent(id);
+            students.remove(st);
             if (st!=null)
                 return st;
         }
