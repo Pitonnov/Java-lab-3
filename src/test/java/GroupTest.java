@@ -1,22 +1,23 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class GroupTest {
+public class GroupTest {
 
     static Deanery deanery = Deanery.getInstance("Test");
     static Student unrolledStudent = deanery.createStudent("unrolledStudent");
     static Student enrolledStudent = deanery.createStudent("enrolledStudent");
     static Group startGroup = deanery.createGroup("startGroup");
 
-    @BeforeAll
-    static void prepare(){
+    @BeforeClass
+    public static void prepare(){
         deanery.enrolling(enrolledStudent, "startGroup");
     }
 
     @Test
-    void findStudent() {
+    public void findStudent() {
         assertNull(startGroup.findStudent(null));
         assertNull(startGroup.findStudent(""));
         assertEquals("Nobody is found", startGroup.findStudent("unregisteredStudent"));
@@ -25,7 +26,7 @@ class GroupTest {
     }
 
     @Test
-    void testFindStudent() {
+    public void testFindStudent() {
         assertNull(startGroup.findStudent(0));
         assertNull(startGroup.findStudent(-1));
         assertEquals("Nobody is found", startGroup.findStudent(1000));
@@ -33,7 +34,7 @@ class GroupTest {
     }
 
     @Test
-    void headElection() {
+    public void headElection() {
         Group AGroup = deanery.createGroup("AGroup");
         Student AStudent = deanery.createStudent("AStudent");
         AStudent.enrollTo("AGroup");
@@ -44,7 +45,7 @@ class GroupTest {
     }
 
     @Test
-    void averageRating() {
+    public void averageRating() {
         Group Group123 = deanery.createGroup("Group123");
         Student Student1 = deanery.createStudent("Student1");
         Student Student2 = deanery.createStudent("Student2");
@@ -55,6 +56,6 @@ class GroupTest {
         Student1.addMark(5);
         Student2.addMark(2);
         Student3.addMark(2);
-        assertEquals(3, Group123.averageRating());
+        assertEquals(3, (int)Group123.averageRating());
     }
 }

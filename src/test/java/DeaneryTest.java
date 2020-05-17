@@ -1,23 +1,24 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class DeaneryTest {
+public class DeaneryTest {
 
     static Deanery deanery = Deanery.getInstance("Test");
     static Student unrolledStudent = deanery.createStudent("unrolledStudent");
     static Student enrolledStudent = deanery.createStudent("enrolledStudent");
     static Group startGroup = deanery.createGroup("startGroup");
 
-    @BeforeAll
-    static void prepare(){
+    @BeforeClass
+    public static void prepare(){
         deanery.enrolling(enrolledStudent, "startGroup");
     }
 
 
     @Test
-    void createGroup() {
+    public void createGroup() {
         assertNull(deanery.createGroup(null));
         assertNull(deanery.createGroup(""));
         assertEquals("testGroup", deanery.createGroup("testGroup").getTitle());
@@ -25,7 +26,7 @@ class DeaneryTest {
     }
 
     @Test
-    void createStudent() {
+    public void createStudent() {
         assertNull(deanery.createStudent(null));
         assertNull(deanery.createStudent(""));
         assertEquals("testName", deanery.createStudent("testName").getName());
@@ -33,7 +34,7 @@ class DeaneryTest {
     }
 
     @Test
-    void enrolling(){
+    public void enrolling(){
         assertNull(deanery.enrolling(null, "testGroup"));
         assertNull(deanery.enrolling(unrolledStudent, ""));
         assertNull(deanery.enrolling(unrolledStudent, null));
@@ -44,14 +45,14 @@ class DeaneryTest {
     }
 
     @Test
-    void setStudentRating(){
+    public void setStudentRating(){
         assertFalse(deanery.setStudentRating(unrolledStudent, 3));
         assertFalse(deanery.setStudentRating(enrolledStudent, 6));
         assertTrue(deanery.setStudentRating(enrolledStudent, 5));
     }
 
     @Test
-    void addRating(){
+    public void addRating(){
         deanery.deleteAllMarks(enrolledStudent);
         deanery.deleteAllMarks(unrolledStudent);
         assertTrue(unrolledStudent.averageRating() == 0);
@@ -62,7 +63,7 @@ class DeaneryTest {
     }
 
     @Test
-    void expelStudent(){
+    public void expelStudent(){
         Student testStudent = deanery.createStudent("testStudent");
         deanery.enrolling(testStudent, "startGroup");
         assertTrue(deanery.findStudent("testStudent"));
@@ -73,7 +74,7 @@ class DeaneryTest {
     }
 
     @Test
-    void transferring(){
+    public void transferring(){
         deanery.createGroup("anotherGroup");
         assertFalse(deanery.transferring(enrolledStudent, null));
         assertFalse(deanery.transferring(enrolledStudent, ""));
@@ -85,7 +86,7 @@ class DeaneryTest {
     }
 
     @Test
-    void doHeadElection(){
+    public void doHeadElection(){
         Group aGroup = deanery.createGroup("aGroup");
         Student aStudent = deanery.createStudent("aStudent");
         deanery.enrolling(aStudent, "aGroup");
@@ -99,7 +100,7 @@ class DeaneryTest {
     }
 
     @Test
-    void expelPoorStudents(){
+    public void expelPoorStudents(){
         Student Student1 = deanery.createStudent("Student1");
         Student Student2 = deanery.createStudent("Student2");
         Student Student3 = deanery.createStudent("Student3");
@@ -120,7 +121,7 @@ class DeaneryTest {
     }
 
     @Test
-    void findStudent(){
+    public void findStudent(){
         assertTrue(deanery.findStudent("roll"));
         assertTrue(deanery.findStudent("enrolledStudent"));
         assertFalse(deanery.findStudent("nonexistentStudent"));
@@ -130,7 +131,7 @@ class DeaneryTest {
     }
 
     @Test
-    void getStudent(){
+    public void getStudent(){
         Student idStudent = deanery.createStudent("idStudent");
         int id = idStudent.getId();
         assertNotSame(idStudent, deanery.getStudent(enrolledStudent.getId()));
@@ -138,7 +139,7 @@ class DeaneryTest {
     }
 
     @Test
-    void getGroup(){
+    public void getGroup(){
         Group newGroup = deanery.createGroup("newGroup");
         assertNotSame(newGroup, deanery.getGroup("startGroup"));
         assertNotSame(newGroup, deanery.getGroup("nonexistentGroup"));

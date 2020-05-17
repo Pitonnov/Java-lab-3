@@ -1,9 +1,10 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class StudentTest {
+public class StudentTest {
 
     static Deanery deanery = Deanery.getInstance("Test");
     static Student unrolledStudent = deanery.createStudent("unrolledStudent");
@@ -11,13 +12,13 @@ class StudentTest {
     static Group startGroup = deanery.createGroup("startGroup");
     static Group anotherGroup = deanery.createGroup("anotherGroup");
 
-    @BeforeAll
-    static void prepare(){
+    @BeforeClass
+    public static void prepare(){
         deanery.enrolling(enrolledStudent, "startGroup");
     }
 
     @Test
-    void enrollTo() {
+    public void enrollTo() {
         Student testStudent = deanery.createStudent("testStudent");
         assertEquals("Without group", testStudent.sayGroup());
         testStudent.enrollTo("nonexistentGroup");
@@ -29,7 +30,7 @@ class StudentTest {
     }
 
     @Test
-    void transferTo() {
+    public void transferTo() {
         enrolledStudent.transferTo("nonexistentGroup");
         assertEquals("startGroup", enrolledStudent.sayGroup());
         unrolledStudent.transferTo("startGroup");
@@ -42,27 +43,27 @@ class StudentTest {
     }
 
     @Test
-    void addMark() {
+    public void addMark() {
         Student testStudent = deanery.createStudent("testStudent");
         testStudent.enrollTo("startGroup");
         testStudent.addMark(-1);
-        assertEquals(0, testStudent.averageRating());
+        assertEquals(0, (int)testStudent.averageRating());
         testStudent.addMark(6);
-        assertEquals(0, testStudent.averageRating());
+        assertEquals(0, (int)testStudent.averageRating());
         testStudent.addMark(4);
-        assertEquals(4, testStudent.averageRating());
+        assertEquals(4, (int)testStudent.averageRating());
     }
 
     @Test
-    void averageRating() {
+    public void averageRating() {
         Student testStudent = deanery.createStudent("testStudent");
         testStudent.enrollTo("startGroup");
-        assertEquals(0, testStudent.averageRating());
+        assertEquals(0, (int) testStudent.averageRating());
         testStudent.addMark(5);
-        assertEquals(5, testStudent.averageRating());
+        assertEquals(5, (int)testStudent.averageRating());
         testStudent.addMark(3);
-        assertEquals(4, testStudent.averageRating());
+        assertEquals(4, (int)testStudent.averageRating());
         testStudent.addMark(1);
-        assertEquals(3, testStudent.averageRating());
+        assertEquals(3, (int)testStudent.averageRating());
     }
 }
