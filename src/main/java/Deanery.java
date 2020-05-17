@@ -7,7 +7,6 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class Deanery {
-    private static boolean exist;
 
     private String faculty;
     private int ID = 1;
@@ -20,16 +19,8 @@ public class Deanery {
         Dialog.deanery = this;
         Display.write("The " + faculty + " faculty has created\n");
     }
-    //pattern singleton is used
     public static Deanery getInstance(String faculty){
-        if (!exist) {
-            exist = true;
-            return new Deanery(faculty);
-        }
-        else {
-            Display.write("Error! The Deanery is already exist");
-            return null;
-        }
+        return new Deanery(faculty);
     }
 
     @Override
