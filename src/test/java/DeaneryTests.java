@@ -1,8 +1,6 @@
-//import static org.junit.Assert.*;
-// import org.junit.Test;
-
-import org.junit.jupiter.api.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotSame;
 
 import University.Deanery;
 import University.Student;
@@ -32,8 +30,8 @@ public class DeaneryTests {
         Student student=Deanery.getStudent(index);
         Group group=student.getGroup();
         Deanery.expelStudent(student);
-        assertNotEquals(student,Deanery.getStudent(index));
-        assertNotEquals(student,group.getStudentByKey(student.getID()));
+        assertNotSame(student,Deanery.getStudent(index));
+        assertNotSame(student,group.getStudentByKey(student.getID()));
     }
     @Test
     public  void expelStudentsWithBadMarks() throws  Exception

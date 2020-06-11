@@ -1,10 +1,9 @@
-//import static org.junit.Assert.*;
-
 import University.Deanery;
 import University.Student;
+
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.*;
 
 public class StudentsTests {
     @Test

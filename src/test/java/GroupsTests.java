@@ -1,9 +1,7 @@
-//import static org.junit.Assert.*;
-//import org.junit.Before;
-//import org.junit.Test;
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.BeforeAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 import University.Deanery;
 import University.Group;
@@ -17,7 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GroupsTests {
     ArrayList<Student> students;
-    @BeforeAll
+    @Before
     public void prepare()
     {
         students=new ArrayList<>();
