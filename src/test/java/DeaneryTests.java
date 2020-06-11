@@ -1,13 +1,14 @@
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
+// import org.junit.Test;
+
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import University.Deanery;
-import University.Group;
 import University.Student;
-import org.junit.Before;
-import org.junit.Test;
+import University.Group;
 
-import java.util.ArrayList;
-import java.util.concurrent.ThreadLocalRandom;
+
 
 public class DeaneryTests {
     public  void readGroupsFile()  throws  Exception
