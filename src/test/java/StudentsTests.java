@@ -1,12 +1,10 @@
 import University.Deanery;
 import University.Student;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StudentsTests {
-    @Test
+    @org.junit.Test
     public void createStudent()
     {
         Student student=Deanery.createRandomStudent();

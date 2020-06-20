@@ -1,7 +1,4 @@
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import University.Deanery;
 import University.Group;
@@ -15,7 +12,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GroupsTests {
     ArrayList<Student> students;
-    @Before
+    @org.junit.Before
     public void prepare()
     {
         students=new ArrayList<>();
@@ -25,14 +22,14 @@ public class GroupsTests {
         for(int i=0;i<20;i++)
             group.addStudent(Deanery.createRandomStudent());
     }
-    @Test
+    @org.junit.Test
     public void enroll() {
         Group group=new Group("IS 27");
         Student student=new Student("Pavel","Petrov","Alberrtovich");
         group.addStudent(student);
         assertEquals(group,student.getGroup());
     }
-    @Test
+    @org.junit.Test
     public void findByName() {
         Group group=new Group("IS 27");
         fillGroup(group);
@@ -41,7 +38,7 @@ public class GroupsTests {
         fillGroup(group);
         assertEquals(student,group.getStudentByKey("Pavel","",""));
     }
-    @Test
+    @org.junit.Test
     public void findBySurname() {
         Group group=new Group("IS 27");
         fillGroup(group);
@@ -50,7 +47,7 @@ public class GroupsTests {
         fillGroup(group);
         assertEquals(student,group.getStudentByKey("","Petrov",""));
     }
-    @Test
+    @org.junit.Test
     public void findByPatronym() {
         Group group=new Group("IS 27");
         fillGroup(group);
@@ -59,7 +56,7 @@ public class GroupsTests {
         fillGroup(group);
         assertEquals(student,group.getStudentByKey("","","Albertovich"));
     }
-    @Test
+    @org.junit.Test
     public void findByFIO() {
         Group group=new Group("IS 27");
         fillGroup(group);
@@ -68,7 +65,7 @@ public class GroupsTests {
         fillGroup(group);
         assertEquals(student,group.getStudentByKey("Pavel","Petrovich","Albertovich"));
     }
-    @Test
+    @org.junit.Test
     public void findByID() {
         Group group=new Group("IS 27");
         fillGroup(group);
@@ -77,7 +74,7 @@ public class GroupsTests {
         fillGroup(group);
         assertEquals(student,group.getStudentByKey(10012));
     }
-    @Test
+    @org.junit.Test
     public void averageMark() {
         Group group=new Group("IS 27");
         float sum=0;
@@ -93,7 +90,7 @@ public class GroupsTests {
         }
         assertEquals(sum/(100*50),group.getAverageMark(),0.01);
     }
-    @Test
+    @org.junit.Test
     public void exclude() {
         Group group=new Group("IS 27");
         fillGroup(group);
