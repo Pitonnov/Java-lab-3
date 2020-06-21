@@ -1,11 +1,13 @@
 package Deanery;
 
+import org.apache.commons.io.IOUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class Deanery {
@@ -30,9 +32,9 @@ public class Deanery {
         int i =0;
         try {
             JSONParser parser = new JSONParser();
-            FileReader fileReader = new FileReader(fileName);
-            Object obj = parser.parse(fileReader);
-            JSONArray studentsArr = (JSONArray) obj;
+            InputStream inputStream = getClass().getResourceAsStream(fileName);
+            String inputFile = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+            JSONArray studentsArr = (JSONArray) parser.parse(inputFile);
             Iterator studIter = studentsArr.iterator();
             while (studIter.hasNext()) {
                 JSONObject stud = (JSONObject) studIter.next();
@@ -42,13 +44,12 @@ public class Deanery {
                 students.add(new Student(idStud++, surname, name, middle_name));
                 i++;
             }
-            fileReader.close();
             parser.reset();
             studentsArr.clear();
-
         } catch (RuntimeException | ParseException | IOException e) {
             e.printStackTrace();
         }
+
         return i;
     }
 
@@ -56,8 +57,9 @@ public class Deanery {
         int i =0;
         try {
             JSONParser parser = new JSONParser();
-            Object obj = parser.parse(new FileReader(fileName));
-            JSONArray groupsArr = (JSONArray) obj;
+            InputStream inputStream = getClass().getResourceAsStream(fileName);
+            String inputFile = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
+            JSONArray groupsArr = (JSONArray) parser.parse(inputFile);
             Iterator groupIter = groupsArr.iterator();
             while (groupIter.hasNext()) {
                 JSONObject group = (JSONObject) groupIter.next();
@@ -246,6 +248,5 @@ public class Deanery {
         } catch (IOException | RuntimeException e) {
             System.out.println("File not saved");
         }
-
     }
 }
