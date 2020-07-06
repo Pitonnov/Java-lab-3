@@ -1,0 +1,124 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Keegan Cook"
+    },
+    {
+      "id": 2,
+      "name": "Isabela Williams"
+    },
+    {
+      "id": 3,
+      "name": "Santino Hill"
+    },
+    {
+      "id": 4,
+      "name": "Zion Kelly"
+    },
+    {
+      "id": 5,
+      "name": "Orabelle Martinez"
+    },
+    {
+      "id": 6,
+      "name": "Noah Jenkins"
+    },
+    {
+      "id": 7,
+      "name": "Olive Thompson"
+    },
+    {
+      "id": 8,
+      "name": "Inaya James"
+    },
+    {
+      "id": 9,
+      "name": "Turner Wright"
+    },
+    {
+      "id": 10,
+      "name": "Liliana Powell"
+    },
+    {
+      "id": 11,
+      "name": "Thaddeus Scott"
+    },
+    {
+      "id": 12,
+      "name": "Nate Jones"
+    },
+    {
+      "id": 13,
+      "name": "Olympia Rogers"
+    },
+    {
+      "id": 14,
+      "name": "Cash White"
+    },
+    {
+      "id": 15,
+      "name": "Tenley Peterson"
+    },
+    {
+      "id": 16,
+      "name": "Ignatius Edwards"
+    },
+    {
+      "id": 17,
+      "name": "Gunner Reed"
+    },
+    {
+      "id": 18,
+      "name": "Ondina Morris"
+    },
+    {
+      "id": 19,
+      "name": "Desmond Henderson"
+    },
+    {
+      "id": 20,
+      "name": "Priscila Wright"
+    },
+    {
+      "id": 21,
+      "name": "Cesar Allen"
+    },
+    {
+      "id": 22,
+      "name": "Quana Johnson"
+    },
+    {
+      "id": 23,
+      "name": "Quintin Morris"
+    },
+    {
+      "id": 24,
+      "name": "Laura Foster"
+    },
+    {
+      "id": 25,
+      "name": "Hadassah Lopez"
+    },
+    {
+      "id": 26,
+      "name": "Kaiden Powell"
+    },
+    {
+      "id": 27,
+      "name": "Charleigh Patterson"
+    },
+    {
+      "id": 28,
+      "name": "Stella Hayes"
+    },
+    {
+      "id": 29,
+      "name": "Porter Ross"
+    },
+    {
+      "id": 30,
+      "name": "Heaven Hill"
+    }
+  ]
+}
