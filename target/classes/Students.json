@@ -1,0 +1,21 @@
+{
+  "Students" :
+  [
+    {
+      "Name" : "Pavel",
+      "surname" :"Ivanov",
+      "patronym" : "Aleksandrovich",
+      "id" : 1,
+      "group" : "IS-27",
+      "marks" : [5,2.4,3.0,2.0,5.0]
+    },
+    {
+      "Name" : "Michael",
+      "surname" :"Andreev",
+      "patronym" : "Petrovich",
+      "id" : 2,
+      "group" : "IS-27",
+      "marks" : [3,4,5,3,4]
+    }
+  ]
+}
